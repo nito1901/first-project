@@ -3,18 +3,26 @@
 <html>
 <body>
 <H1>Excercise 1</H1>
+
 <script>
     var a = 10,
         b = 20;
     
-        document.write ("a = " + a);
+        document.write ("Starting values<br>a = " + a);
         document.write ("<br>b = " + b);
-        
-        [a,b] = [b,a]
+            
+            function swapValues(){
+                document.getElementById("output").innerHTML += "<br><br>Starting values<br>a = "
+                + a + "<br>b = " + b;
+                [a,b] = [b,a];
+                document.getElementById("output").innerHTML += "<br><br>New values<br>a = " + a
+                + "<br>b = " + b;
+            }
+</script>  
 
-        document.write ("<br><br>a = " + a);
-        document.write ("<br>b = " + b);
-  </script>
-
+<br>
+<button type="button" onclick="swapValues()">Swap values</button><br>
+<button type="button" onclick="location.reload()">Reload page</button>
+<p id="output"></p>
 </body>
 </html>
